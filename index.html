@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'quv Markazi Uchun Veb-Sayt Paketlari</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Header Section -->
+    <header class="max-w-6xl mx-auto px-4 pt-12 pb-8 text-center">
+        <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/30 px-4 py-1.5 rounded-full text-indigo-300 text-sm font-medium mb-6 animate-pulse">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Professional Veb-Dasturlash Xizmatlari</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-white via-indigo-200 to-purple-300 bg-clip-text text-transparent">
+            O'quv Markazingiz Uchun Mukammal Sayt
+        </h1>
+        <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto font-light">
+            Talabalarni jalb qiluvchi, zamonaviy va tez ishlaydigan veb-sayt paketlaridan birini tanlang.
+        </p>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-6xl mx-auto px-4 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            
+            <!-- 1. START TARIFI -->
+            <div onclick="selectTariff('start')" class="group relative bg-slate-900/80 border border-slate-700/60 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:border-indigo-500 hover:shadow-2xl hover:shadow-indigo-500/20 cursor-pointer flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-2xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <span class="text-xs font-semibold tracking-wider uppercase text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full">Boshlang'ich</span>
+                    <h3 class="text-2xl font-bold mt-4 mb-2 text-white">Start</h3>
+                    <p class="text-slate-400 text-sm mb-6">Kichik o'quv markazlari uchun bir sahifali Landing Page.</p>
+                    <div class="text-3xl font-extrabold text-white mb-6">$100 <span class="text-sm font-normal text-slate-400">/ loyiha</span></div>
+                    
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-indigo-400"></i> Bir sahifali Landing Page</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-indigo-400"></i> Asosiy ma'lumotlar va kurslar</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-indigo-400"></i> Aloqa va xarita (Map)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-indigo-400"></i> Ariza qoldirish shakli</li>
+                    </ul>
+                </div>
+                <button class="w-full py-3.5 px-4 rounded-xl bg-slate-800 border border-slate-700 text-white font-semibold group-hover:bg-indigo-600 group-hover:border-indigo-600 transition-all duration-300 flex items-center justify-center gap-2">
+                    <span>Batafsil ko'rish</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+
+            <!-- 2. PREMIUM TARIFI (POPULAR) -->
+            <div onclick="selectTariff('premium')" class="group relative bg-gradient-to-b from-indigo-900/90 to-slate-900 border-2 border-indigo-500 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/30 cursor-pointer flex flex-col justify-between animate-float shadow-xl">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg">
+                    Tavsiya etiladi
+                </div>
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-indigo-500/30 border border-indigo-400/50 flex items-center justify-center text-indigo-300 text-2xl mb-6 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <span class="text-xs font-semibold tracking-wider uppercase text-purple-300 bg-purple-500/20 px-3 py-1 rounded-full">Professional</span>
+                    <h3 class="text-2xl font-bold mt-4 mb-2 text-white">Premium</h3>
+                    <p class="text-indigo-200/80 text-sm mb-6">Kengaytirilgan va to'liq ko'p sahifali professional sayt.</p>
+                    <div class="text-3xl font-extrabold text-white mb-6">$180 <span class="text-sm font-normal text-indigo-300">/ loyiha</span></div>
+                    
+                    <ul class="space-y-3 text-sm text-indigo-100 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-indigo-400"></i> Ko'p sahifali sayt (Asosiy, Kurslar)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-indigo-400"></i> Ustozlar va Galereya bo'limlari</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-indigo-400"></i> Kontaktlar va xarita</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-indigo-400"></i> SEO qidiruv tizimi sozlamalari</li>
+                    </ul>
+                </div>
+                <button class="w-full py-3.5 px-4 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-500 transition-all duration-300 shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2">
+                    <span>Batafsil ko'rish</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+
+            <!-- 3. PREMIUM+ TARIFI -->
+            <div onclick="selectTariff('premium_plus')" class="group relative bg-slate-900/80 border border-slate-700/60 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:border-purple-500 hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <span class="text-xs font-semibold tracking-wider uppercase text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full">VIP / Maxsus</span>
+                    <h3 class="text-2xl font-bold mt-4 mb-2 text-white">Premium+</h3>
+                    <p class="text-slate-400 text-sm mb-6">Maksimal imkoniyatlar va individual yondashuv.</p>
+                    <div class="text-3xl font-extrabold text-white mb-6">$300+ <span class="text-sm font-normal text-slate-400">/ loyiha</span></div>
+                    
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Individual zamonaviy dizayn</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Shaxsiy kabinet imkoniyati</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Maxsus funksiyalar va CRM</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Bepul texnik yordam va qo'llab-quvvatlash</li>
+                    </ul>
+                </div>
+                <button class="w-full py-3.5 px-4 rounded-xl bg-slate-800 border border-slate-700 text-white font-semibold group-hover:bg-purple-600 group-hover:border-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
+                    <span>Batafsil ko'rish</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modal Window for Details -->
+    <div id="modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+        <div id="modal-content" class="bg-slate-900 border border-slate-700 rounded-3xl max-w-lg w-full p-6 md:p-8 transform scale-95 transition-all duration-300 relative shadow-2xl">
+            <!-- Close button -->
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div id="modal-body">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-slate-500 text-sm border-t border-slate-800/80">
+        <p>&copy; 2026 Veb-Dasturlash Xizmatlari. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        const tariffData = {
+            start: {
+                title: "Start (Boshlang'ich Paket)",
+                price: "$100",
+                time: "3-4 kun",
+                description: "Kichik o'quv markazlari va kurslar uchun internetda o'z vizitkasiga ega bo'lish uchun ideal tanlov.",
+                features: [
+                    "Bir sahifali Landing Page",
+                    "Asosiy ma'lumotlar va afzalliklar",
+                    "Kurslar ro'yxati va narxlari",
+                    "Aloqa ma'lumotlari va joylashuv (Xarita)",
+                    "Ariza qoldirish va zayavka yig'ish shakli",
+                    "Mobil qurilmalarga to'liq moslashuv"
+                ]
+            },
+            premium: {
+                title: "Premium (Professional Paket)",
+                price: "$180",
+                time: "5-7 kun",
+                description: "O'z brendini yanada ishonchli va keng ko'rsatishni istagan o'quv markazlari uchun tavsiya etiladi.",
+                features: [
+                    "Ko'p sahifali to'liq sayt",
+                    "Asosiy, Kurslar bo'limlari",
+                    "Ustozlar va Galereya sahifalari",
+                    "Kontaktlar va xarita integratsiyasi",
+                    "SEO qidiruv tizimi boshlang'ich sozlamalari",
+                    "Sayt yuklanish tezligini optimizatsiya qilish"
+                ]
+            },
+            premium_plus: {
+                title: "Premium+ (VIP / Maxsus Paket)",
+                price: "$300+",
+                time: "Individual kelishiladi",
+                description: "Murakkab funksionalga ega, individual dizayn va maxsus yondashuvni talab qiluvchi markazlar uchun.",
+                features: [
+                    "Noyob va takrorlanmas individual dizayn",
+                    "O'quvchilar uchun shaxsiy kabinet imkoniyati",
+                    "Maxsus funksiyalar va CRM tizimlar bilan integratsiya",
+                    "Murakkab animatsiyalar va zamonaviy UI/UX",
+                    "1 yillik bepul texnik yordam va hosting ko'magi"
+                ]
+            }
+        };
+
+        function selectTariff(type) {
+            const data = tariffData[type];
+            const modal = document.getElementById('modal');
+            const modalContent = document.getElementById('modal-content');
+            const modalBody = document.getElementById('modal-body');
+
+            const safeTitle = data.title.replace(/'/g, "\\'");
+
+            modalBody.innerHTML = `
+                <div class="inline-block bg-indigo-500/20 text-indigo-300 px-3 py-1 rounded-full text-xs font-semibold mb-3">Tanlangan Tarif</div>
+                <h2 class="text-2xl font-bold text-white mb-2">${data.title}</h2>
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="text-3xl font-extrabold text-indigo-400">${data.price}</span>
+                    <span class="text-slate-400 text-sm bg-slate-800 px-3 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1.5"></i> ${data.time}</span>
+                </div>
+                <p class="text-slate-300 text-sm mb-6">${data.description}</p>
+                
+                <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Paketga kiritilganlar:</h4>
+                <ul class="space-y-2 mb-8 text-sm text-slate-300">
+                    ${data.features.map(f => `<li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-indigo-400 text-xs"></i> ${f}</li>`).join('')}
+                </ul>
+
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button onclick="orderTariff('${safeTitle}')" class="flex-1 py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-all shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Buyurtma Berish</span>
+                    </button>
+                    <button onclick="closeModal()" class="py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold transition-all">
+                        Yopish
+                    </button>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            const modalContent = document.getElementById('modal-content');
+            
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function orderTariff(title) {
+            const message = encodeURIComponent(`Assalomu alaykum! Men o'quv markazi uchun "${title}" tarifini tanladim va sayt yasatish bo'yicha buyurtma bermoqchiman.`);
+            window.open(`https://t.me/shokirjonov_011?text=${message}`, '_blank');
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
